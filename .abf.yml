@@ -1,0 +1,9 @@
+sources:
+  "disable-mrproper-in-devel-rpms.patch:"	e252df5b9ce5a4ced38992d14f58bfe09c9485de
+  "i386.config:"	728b49a8ca332e275f1b5df3c694d32178fcc147
+  "i386-pae.config:"	b6cbe1af215e7adb1aa569aa28154278aebb6792
+  "linux-2.6.26.tar.bz2:"	609291edc6f5cf95b7e4e1aa4b42b2a63bf19b15
+  "linux-2.6.26.tar.bz2.sign:"	67d4c31cc90bfcb977a0d82d15aadd40e75c0d7a
+  "README.kernel-sources:"	a99423be3b915afdad9633b0fa4ab6af139ada36
+  "README.MandrivaLinux:"	d9fd584b29249abcfc126c8c1c857556ed8fef38
+  "x86_64.config:"	b37df07154a96f6313b703455c26cbcb565b0836

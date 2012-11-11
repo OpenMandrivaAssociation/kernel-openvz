@@ -1,0 +1,21 @@
+diff -up ./drivers/block/drbd/drbd_main.c.procfix ./drivers/block/drbd/drbd_main.c
+--- ./drivers/block/drbd/drbd_main.c.procfix	2008-10-01 19:37:50.000000000 +0400
++++ ./drivers/block/drbd/drbd_main.c	2008-10-01 19:39:25.000000000 +0400
+@@ -2564,7 +2564,7 @@ STATIC void drbd_cleanup(void)
+ 
+ 	if (minor_table) {
+ 		if (drbd_proc)
+-			remove_proc_entry("drbd", &proc_root);
++			remove_proc_entry("drbd", NULL);
+ 		i = minor_count;
+ 		while (i--) {
+ 			struct drbd_conf        *mdev  = minor_to_mdev(i);
+@@ -2786,7 +2786,7 @@ int __init drbd_init(void)
+ 	/*
+ 	 * register with procfs
+ 	 */
+-	drbd_proc = create_proc_entry("drbd",  S_IFREG | S_IRUGO , &proc_root);
++	drbd_proc = create_proc_entry("drbd",  S_IFREG | S_IRUGO , NULL);
+ 
+ 	if (!drbd_proc)	{
+ 		printk(KERN_ERR "drbd: unable to register proc file\n");

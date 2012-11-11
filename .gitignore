@@ -1,0 +1,8 @@
+disable-mrproper-in-devel-rpms.patch
+i386.config
+i386-pae.config
+linux-2.6.26.tar.bz2
+linux-2.6.26.tar.bz2.sign
+README.kernel-sources
+README.MandrivaLinux
+x86_64.config
