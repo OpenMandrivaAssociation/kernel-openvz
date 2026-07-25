@@ -40,14 +40,14 @@
 
 %define rpmtag		%distsuffix
 %if %kpatch
-%define rpmrel		%mkrel 0.%{kpatch}.%{ktag}%{openvz_rel}.%{mdvrelease}
+%define rpmrel		0.%{kpatch.1}.%{ktag}%{openvz_rel}.%{mdvrelease}
 %else
-%define rpmrel		%mkrel 1.%{ktag}%{openvz_rel}.%{mdvrelease}
+%define rpmrel		1.%{ktag.1}%{openvz_rel}.%{mdvrelease}
 %endif
 
 # theese two never change, they are used to fool rpm/urpmi/smart
 %define fakever		1
-%define fakerel		%mkrel 1
+%define fakerel		2
 
 # When we are using a pre/rc patch, the tarball is a sublevel -1
 %if %kpatch
@@ -204,8 +204,8 @@ Patch2101: diff-drbd-proc-fix
 ####################################################################
 
 # Defines for the things that are needed for all the kernels
-%define requires1 module-init-tools >= 3.0-%mkrel 7
-%define requires2 mkinitrd >= 3.4.43-%mkrel 10
+%define requires1 module-init-tools >= 3.0-8
+%define requires2 mkinitrd >= 3.4.43-11
 %define requires3 bootloader-utils >= 1.9
 %define requires4 sysfsutils module-init-tools >= 0.9.15
 %define requires5 kernel-firmware >= 2.6.27-0.rc2.2mdv
